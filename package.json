@@ -37,7 +37,7 @@
         "gruntplugin"
     ],
     "dependencies": {
-        "svg-modify": "~0.0.5",
+        "svg-modify": "git+ssh://git@github.com:paperlesspost/svg-modify.git",
         "mustache": "~0.8.2",
         "open": "0.0.5"
     }
