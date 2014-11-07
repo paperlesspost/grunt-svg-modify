@@ -88,6 +88,7 @@ module.exports = function(grunt) {
             var defaults = folderOptionsFile["defaults"];
             var variations = folderOptionsFile["variations"];
             var color = folderOptionsFile["defaultColor"];
+            var singleFile = folderOptionsFile["singleFile"];
 
             // colorize after setting defaults
             if (color) {
@@ -100,6 +101,7 @@ module.exports = function(grunt) {
                 changesParams["inputFolder"] = folderPath;
                 changesParams["outputFolder"] = "temp/";
                 changesParams["folderOptions"] = defaults;
+                changesParams["singleFile"] = singleFile;
 
                 svgmodify.makeChanges(changesParams);
 
@@ -118,6 +120,7 @@ module.exports = function(grunt) {
                 } else if (variations) {
                     folderOptions = variations;
                 }
+                changesParams["singleFile"] = singleFile;
                 changesParams["folderOptions"] = folderOptions;
                 svgmodify.makeChanges(changesParams);
 
